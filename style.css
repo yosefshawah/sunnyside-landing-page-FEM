@@ -1,0 +1,376 @@
+:root {
+  /* primary color */
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --Dark-blue: hsl(198, 62%, 26%);
+  --Dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+
+  /* neatral color */
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Barlow";
+
+  min-height: 100%;
+}
+
+.wrapper {
+  /* border: 2px solid dodgerblue; */
+}
+.header {
+  background: url("./images/desktop/image-header.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+nav {
+  font-family: "Barlow", sans-serif;
+  padding: 1rem 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav__ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.nav__ul li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.nav__ul li {
+  text-decoration: none;
+  color: var(--White);
+  font-family: "Barlow", sans-serif;
+  padding: 0.6rem 1.2rem;
+  border-radius: 3.25em;
+}
+
+.nav__ul li:last-child {
+  color: var(--Very-dark-desaturated-blue);
+  background-color: var(--White);
+  font-family: "Fraunces", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-block: auto;
+}
+
+.nav__ul li:hover:not(:last-child) {
+  text-transform: uppercase;
+  font-family: "Fraunces", serif !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  background: hsla(0, 0%, 100%, 0.2);
+  /* transition: all 2s ease-in-out; */
+}
+
+.arrow {
+  height: 100px;
+}
+
+.header h1 {
+  color: var(--White);
+  font-family: "Fraunces";
+  text-transform: uppercase;
+
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-top: 5rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-1__text {
+  padding: 5rem;
+  text-align: left;
+}
+
+.grid-1__text h2 {
+  font-weight: 900;
+}
+.grid-p {
+  width: 60%;
+  font-weight: 400;
+}
+
+.grid-1__text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-1__text a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: small;
+}
+
+.g1-item-1 a {
+  text-decoration: underline;
+  text-decoration-color: var(--Yellow); /* Set underline color */
+  text-decoration-thickness: 3px; /* Adjust thickness */
+}
+.g1-item-4 a {
+  text-decoration: underline;
+  text-decoration-color: var(--Soft-red); /* Set underline color */
+  text-decoration-thickness: 3px; /* Adjust thickness */
+}
+
+.g-5 {
+  object-fit: cover;
+  background: url("./images/desktop/image-graphic-design.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+.g-5 h2 {
+  margin-bottom: 1rem;
+}
+
+.g-6 {
+  background: url("./images/desktop/image-photography.jpg") center no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.g-6 h2 {
+  margin-bottom: 1rem;
+}
+
+.grid-1__text {
+  position: relative;
+  /* border: 2px solid black; */
+}
+
+.pos-abs {
+  padding-top: 10rem;
+  width: 70%;
+}
+
+.testimonials {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.testimonials h2 {
+  margin-bottom: 2rem;
+}
+
+.test-children {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+.test-children img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.test-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* border: 2px solid dodgerblue; */
+}
+
+.test-item-text {
+  width: 80%;
+}
+h3 span {
+  /* white-space: pre-wrap; */
+  font-size: x-small;
+  font-weight: 200;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 6rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  background-color: var(--Dark-moderate-cyan-footer);
+}
+.footer img:nth-of-type(1) {
+  filter: invert(1) brightness(0);
+}
+
+.footer__ul {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+.footer__ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.footer__ul li {
+  font-weight: 200;
+}
+
+.footer__socials {
+  display: flex;
+  padding-bottom: 2rem;
+}
+.footer__socials li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer nav a {
+  text-decoration: none;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: hsl(167, 40%, 5%);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.35s;
+  font-family: "Barlow", sans-serif;
+}
+
+footer nav ul li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.footer__socials li a {
+  display: inline-block;
+  list-style: none;
+  margin: 0.7rem;
+}
+
+.footer__socials li a {
+  text-decoration: none;
+}
+
+.footer__socials li a img {
+  transition: 0.35s;
+}
+
+.footer__socials li a:hover img {
+  filter: brightness(0) invert(1);
+}
